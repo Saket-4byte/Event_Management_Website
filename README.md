@@ -4,7 +4,7 @@
 A premium, modern, and fully responsive Event Discovery & Registration Web Application built with vanilla web standards (HTML5, CSS3, ES6+ JavaScript, LocalStorage, Lucide Icons, and Google Fonts).
 
 - **GitHub Repository:** [https://github.com/Saket-4byte/Event_Management_Website](https://github.com/Saket-4byte/Event_Management_Website)
-- **Live Demo (GitHub Pages):** [https://saket-4byte.github.io/Event_Management_Website/](https://saket-4byte.github.io/Event_Management_Website/)
+- **Deployment Platform:** [Vercel](https://vercel.com) (Continuous Deployment from GitHub)
 
 ---
 
@@ -151,23 +151,25 @@ npx live-server
 
 ---
 
-## 🌐 Production Deployment Instructions
+## 🌐 Production Deployment Guide (Vercel)
 
-Eventora is built purely with web standards (HTML5, CSS3, Vanilla ES6+ JavaScript) and requires zero backend or server build steps. It deploys seamlessly across all standard static hosting platforms:
+Eventora is built purely with web standards (HTML5, CSS3, Vanilla ES6+ JavaScript) and requires zero backend compilation. It is pre-configured with `vercel.json` for one-click deployment on **Vercel**:
 
-### 1. GitHub Pages
-1. Push the `eventora` project directory to a GitHub repository.
-2. In your GitHub repository, open **Settings** $\rightarrow$ **Pages**.
-3. Under **Branch**, select `main` (or `master`) and `/ (root)` folder.
-4. Click **Save**. Your site will be published at `https://<username>.github.io/<repository-name>/`.
+### Deploying with Vercel via GitHub (Recommended)
+1. Go to [vercel.com](https://vercel.com) and log in (or sign in with your GitHub account).
+2. Click **"Add New..."** $\rightarrow$ **"Project"**.
+3. Under **Import Git Repository**, find and select `Saket-4byte/Event_Management_Website`.
+4. Configure Project settings:
+   - **Framework Preset:** `Other` (Static HTML/JS)
+   - **Root Directory:** `./`
+   - **Build Command:** Leave empty
+   - **Output Directory:** Leave empty
+5. Click **"Deploy"**.
+6. Vercel will immediately build and assign a production URL (e.g., `https://event-management-website-xxx.vercel.app`). Any future `git push` to `main` will automatically trigger a new deployment preview.
 
-### 2. Netlify
+---
+
+### Alternative Static Hosting (Netlify)
 1. Log in to [Netlify](https://app.netlify.com).
-2. Drag and drop the `eventora` folder directly into the Netlify dashboard, or connect your Git repository.
-3. Keep the build command empty and set publish directory to `.` (root).
-4. Click **Deploy Site**.
-
-### 3. Vercel
-1. Log in to [Vercel](https://vercel.com) and click **Add New Project**.
-2. Select your repository, leave Framework Preset as **Other**, and set Root Directory as `./`.
-3. Click **Deploy**. All asset paths and ES6 modules work immediately.
+2. Connect your GitHub repository `Saket-4byte/Event_Management_Website` or drag-and-drop the directory.
+3. Keep the build command empty, publish directory as `.`, and click **Deploy Site**.
