@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Eventora - Discover. Experience. Celebrate. Premium event discovery platform for concerts, tech summits, arts, and workshops.">
+  <meta name="theme-color" content="#0B1020">
+  <title>Eventora | Discover. Experience. Celebrate.</title>
+
+  <!-- Google Fonts: Manrope (Headings & Display) & Inter (Body & UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Cache Control (Prevent Stale Cache During Development) -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=3">
+</head>
+
+<body>
+  <!-- Accessible Skip Link -->
+  <a href="#explore-events" class="skip-link">Skip to main content</a>
+
+  <!-- ======================================================================
+       1. NAVIGATION BAR
+       ====================================================================== -->
+  <header class="site-header" id="site-header" role="banner">
+    <div class="container header-container">
+      <!-- Brand Logo -->
+      <a href="#home" class="brand-logo" aria-label="Eventora Home">
+        <div class="logo-icon-wrapper">
+          <i data-lucide="sparkles" class="logo-icon" aria-hidden="true"></i>
+        </div>
+        <div class="logo-text-group">
+          <span class="logo-title">Eventora</span>
+          <span class="logo-tagline">Discover. Experience. Celebrate.</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="nav-links-desktop" aria-label="Primary Navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#featured-events" class="nav-link">Featured</a>
+        <a href="#explore-events" class="nav-link">Explore Events</a>
+        <a href="#why-eventora" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Action Controls (Search Icon, My Registrations, Theme Toggle, Mobile Hamburger) -->
+      <div class="nav-actions">
+        <!-- Quick Search Toggle / Trigger -->
+        <a href="#explore-events" class="nav-icon-btn" aria-label="Search events" title="Search Events">
+          <i data-lucide="search" aria-hidden="true"></i>
+        </a>
+
+        <!-- My Registrations Trigger Button -->
+        <button type="button" class="nav-registrations-btn" id="my-registrations-btn"
+          aria-label="View My Registrations">
+          <i data-lucide="clipboard-list" class="nav-btn-icon" aria-hidden="true"></i>
+          <span class="nav-btn-text">My Registrations</span>
+          <span class="badge-count" data-badge="my-registrations-count" style="display: none;">0</span>
+        </button>
+
+        <!-- Dark / Light Theme Toggle -->
+        <button type="button" class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle dark and light theme"
+          title="Toggle Theme">
+          <i data-lucide="moon" class="theme-icon dark-icon" aria-hidden="true"></i>
+          <i data-lucide="sun" class="theme-icon light-icon" aria-hidden="true"></i>
+        </button>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button type="button" class="hamburger-btn" id="hamburger-btn" aria-label="Open navigation menu"
+          aria-expanded="false" aria-controls="mobile-nav-drawer">
+          <i data-lucide="menu" class="hamburger-icon" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
+      <nav class="mobile-nav-links" aria-label="Mobile Navigation">
+        <a href="#home" class="mobile-nav-link">Home</a>
+        <a href="#featured-events" class="mobile-nav-link">Featured Events</a>
+        <a href="#explore-events" class="mobile-nav-link">Explore Events</a>
+        <a href="#why-eventora" class="mobile-nav-link">Why Eventora</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+      </nav>
+      <div class="mobile-nav-actions">
+        <button type="button" class="btn btn-primary btn-full" id="mobile-reg-btn">
+          <i data-lucide="clipboard-list" aria-hidden="true"></i>
+          <span>View My Registrations</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       MAIN LANDMARK
+       ====================================================================== -->
+  <main id="main-content" class="site-main">
+
+    <!-- ==================================================================
+         2. HERO SECTION
+         ================================================================== -->
+    <section class="hero-section" id="home" aria-labelledby="hero-title">
+      <!-- Decorative ambient gradient lights -->
+      <div class="hero-glow-purple" aria-hidden="true"></div>
+      <div class="hero-glow-orange" aria-hidden="true"></div>
+
+      <div class="container hero-container">
+        <!-- Hero Text & CTA -->
+        <div class="hero-content">
+          <div class="hero-pill-badge">
+            <span class="badge-dot"></span>
+            <i data-lucide="flame" class="badge-icon" aria-hidden="true"></i>
+            <span>Trending Experiences Across 20+ Cities</span>
+          </div>
+
+          <h1 id="hero-title" class="hero-heading">
+            Find Your Next <br />
+            <span class="gradient-headline">Unforgettable Experience.</span>
+          </h1>
+
+          <p class="hero-description">
+            Discover premier tech summits, pulsating music festivals, culinary expos, and hands-on workshops. Curated by
+            experts, designed for genuine celebration.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#explore-events" class="btn btn-primary btn-lg">
+              <span>Explore Events</span>
+              <i data-lucide="arrow-right" class="btn-icon" aria-hidden="true"></i>
+            </a>
+
+            <button type="button" class="btn btn-secondary btn-lg" id="host-event-btn">
+              <i data-lucide="calendar-plus" class="btn-icon" aria-hidden="true"></i>
+              <span>Host an Event</span>
+            </button>
+          </div>
+
+          <!-- Hero Metrics -->
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <span class="stat-number">50K+</span>
+              <span class="stat-label">Happy Attendees</span>
+            </div>
+            <div class="stat-separator" aria-hidden="true"></div>
+            <div class="stat-item">
+              <span class="stat-number">250+</span>
+              <span class="stat-label">Curated Events</span>
+            </div>
+            <div class="stat-separator" aria-hidden="true"></div>
+            <div class="stat-item">
+              <span class="stat-number">4.9 / 5</span>
+              <span class="stat-label">Community Score</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Presentation with Floating Information Cards -->
+        <div class="hero-visual-wrapper">
+          <div class="hero-image-frame">
+            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1200&q=80"
+              alt="Audience enjoying an immersive live festival experience" class="hero-banner-img" loading="eager" />
+            <div class="hero-image-overlay" aria-hidden="true"></div>
+          </div>
+
+          <!-- Floating Info Card 1: Top Floating Badge -->
+          <div class="floating-card floating-card-top" aria-hidden="true">
+            <div class="floating-card-icon music-icon-bg">
+              <i data-lucide="music-2" class="float-icon"></i>
+            </div>
+            <div class="floating-card-content">
+              <span class="floating-title">Neon Odyssey Live</span>
+              <span class="floating-sub">Austin, TX • Selling Out</span>
+            </div>
+            <span class="floating-tag">Tonight</span>
+          </div>
+
+          <!-- Floating Info Card 2: Bottom Floating Badge -->
+          <div class="floating-card floating-card-bottom" aria-hidden="true">
+            <div class="floating-card-icon tech-icon-bg">
+              <i data-lucide="cpu" class="float-icon"></i>
+            </div>
+            <div class="floating-card-content">
+              <span class="floating-title">Future AI Summit</span>
+              <span class="floating-sub">San Francisco • 2.4k Registered</span>
+            </div>
+            <div class="floating-rating">
+              <i data-lucide="star" class="star-icon"></i>
+              <span>4.9</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         3. FEATURED EVENTS ("Events Worth Experiencing.")
+         ================================================================== -->
+    <section class="section-featured" id="featured-events" aria-labelledby="featured-title">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header-block">
+          <div class="section-badge">
+            <i data-lucide="sparkles" class="badge-icon" aria-hidden="true"></i>
+            <span>Curated Highlights</span>
+          </div>
+          <h2 id="featured-title" class="section-main-heading">Events Worth Experiencing.</h2>
+          <p class="section-main-subtitle">
+            Hand-picked flagship gatherings, major summits, and seasonal celebrations with limited spots.
+          </p>
+        </div>
+
+        <!-- Featured Events Grid (Dynamically rendered by js/events.js) -->
+        <div id="featured-grid" class="featured-cards-grid" role="region" aria-label="Featured Events Collection">
+          <!-- Dynamic high-impact cards will be loaded here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         4. EXPLORE EVENTS
+         ================================================================== -->
+    <section class="section-explore" id="explore-events" aria-labelledby="explore-title">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header-block">
+          <div class="section-badge">
+            <i data-lucide="compass" class="badge-icon" aria-hidden="true"></i>
+            <span>Full Directory</span>
+          </div>
+          <h2 id="explore-title" class="section-main-heading">Explore Events</h2>
+          <p class="section-main-subtitle">
+            Search across upcoming gatherings, filter by category passion, or sort by date and pricing.
+          </p>
+        </div>
+
+        <!-- Search & Filter Toolbar -->
+        <div class="explore-toolbar">
+          <!-- Live Search Input -->
+          <div class="explore-search-box" role="search">
+            <i data-lucide="search" class="search-box-icon" aria-hidden="true"></i>
+            <input type="search" id="event-search-input" class="search-box-input"
+              placeholder="Search by event title, artist, city or keywords..." aria-label="Search events" />
+            <button type="button" id="clear-search-btn" class="clear-search-btn" aria-label="Clear search query"
+              style="display: none;">
+              <i data-lucide="x" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <!-- Secondary Filters (Price & Sort) -->
+          <div class="toolbar-dropdowns">
+            <div class="select-wrapper">
+              <label for="price-filter-select" class="sr-only">Filter by Price</label>
+              <select id="price-filter-select" class="styled-select" aria-label="Filter events by price">
+                <option value="all">All Prices</option>
+                <option value="free">Free Admission</option>
+                <option value="paid">Paid Events</option>
+              </select>
+            </div>
+
+            <div class="select-wrapper">
+              <label for="sort-filter-select" class="sr-only">Sort Events</label>
+              <select id="sort-filter-select" class="styled-select" aria-label="Sort events">
+                <option value="date-asc">Date: Upcoming First</option>
+                <option value="date-desc">Date: Latest First</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category Filter Pills Bar (with "Show All" option) -->
+        <nav class="category-pills-nav" aria-label="Filter by Event Category">
+          <div id="category-filter-bar" class="category-pills-track">
+            <!-- Dynamically populated by js/events.js -->
+          </div>
+        </nav>
+
+        <!-- Results Counter & Reset Filter Trigger -->
+        <div class="results-feedback-bar">
+          <span id="results-count-text" class="results-count-label">Loading upcoming events...</span>
+          <button type="button" id="reset-filters-btn" class="reset-filters-btn" style="display: none;">
+            <i data-lucide="rotate-ccw" class="btn-icon-xs" aria-hidden="true"></i>
+            <span>Reset All Filters</span>
+          </button>
+        </div>
+
+        <!-- Dynamic Upcoming Events Grid -->
+        <div id="upcoming-grid" class="events-catalog-grid" role="region" aria-live="polite"
+          aria-label="Upcoming Events Directory">
+          <!-- Dynamically populated by js/events.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         5. WHY EVENTORA
+         ================================================================== -->
+    <section class="section-why" id="why-eventora" aria-labelledby="why-title">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header-block text-center">
+          <div class="section-badge">
+            <i data-lucide="award" class="badge-icon" aria-hidden="true"></i>
+            <span>The Eventora Advantage</span>
+          </div>
+          <h2 id="why-title" class="section-main-heading">Why Eventora</h2>
+          <p class="section-main-subtitle center-sub">
+            Designed for curious minds, passionate creators, and unforgettable memories.
+          </p>
+        </div>
+
+        <!-- 4 Core Value Pillars (Grid) -->
+        <div class="why-grid">
+          <!-- Pillar 1 -->
+          <div class="why-card">
+            <div class="why-icon-wrap orange-glow">
+              <i data-lucide="zap" class="why-icon" aria-hidden="true"></i>
+            </div>
+            <h3 class="why-card-title">Easy Registration</h3>
+            <p class="why-card-desc">
+              Reserve your spot in under 30 seconds. No endless checkout steps, just fast, frictionless event
+              reservations.
+            </p>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="why-card">
+            <div class="why-icon-wrap purple-glow">
+              <i data-lucide="sparkles" class="why-icon" aria-hidden="true"></i>
+            </div>
+            <h3 class="why-card-title">Discover Amazing Experiences</h3>
+            <p class="why-card-desc">
+              Every event is carefully vetted for quality, whether it's an intimate acoustic session or an international
+              tech convention.
+            </p>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="why-card">
+            <div class="why-icon-wrap cyan-glow">
+              <i data-lucide="layers" class="why-icon" aria-hidden="true"></i>
+            </div>
+            <h3 class="why-card-title">Explore Different Categories</h3>
+            <p class="why-card-desc">
+              From coding masterclasses and gourmet food expos to music festivals, find community gatherings that match
+              your true passions.
+            </p>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="why-card">
+            <div class="why-icon-wrap green-glow">
+              <i data-lucide="shield-check" class="why-icon" aria-hidden="true"></i>
+            </div>
+            <h3 class="why-card-title">Simple & Secure Experience</h3>
+            <p class="why-card-desc">
+              Your registrations remain safely stored on your device. Manage, view, or cancel your bookings anytime with
+              zero spam.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         6. NEWSLETTER SECTION
+         ================================================================== -->
+    <section class="section-newsletter" aria-labelledby="newsletter-title">
+      <div class="container">
+        <div class="newsletter-card">
+          <!-- Ambient decorative light inside card -->
+          <div class="newsletter-glow" aria-hidden="true"></div>
+
+          <div class="newsletter-content">
+            <div class="newsletter-badge">
+              <i data-lucide="mail" class="badge-icon" aria-hidden="true"></i>
+              <span>Weekly Event Briefing</span>
+            </div>
+            <h2 id="newsletter-title" class="newsletter-heading">
+              Never Miss an Unforgettable Event.
+            </h2>
+            <p class="newsletter-description">
+              Join over 50,000+ experience enthusiasts. Get weekly early-bird announcements, VIP releases, and secret
+              local pop-up invites.
+            </p>
+
+            <!-- Newsletter Subscription Form -->
+            <form id="newsletter-form" class="newsletter-form" novalidate>
+              <div class="newsletter-input-group">
+                <i data-lucide="mail" class="newsletter-mail-icon" aria-hidden="true"></i>
+                <input type="email" id="newsletter-email" class="newsletter-input"
+                  placeholder="Enter your email address..." required aria-label="Email address for event newsletter" />
+                <button type="submit" class="btn btn-primary newsletter-submit-btn">
+                  <span>Subscribe Now</span>
+                  <i data-lucide="send" class="btn-icon" aria-hidden="true"></i>
+                </button>
+              </div>
+              <p class="newsletter-status-msg" id="newsletter-status"></p>
+              <p class="newsletter-disclaimer">
+                🔒 We respect your privacy. No spam ever. Unsubscribe with one click anytime.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         CONTACT SECTION
+         ================================================================== -->
+    <section class="section-contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-card">
+          <div class="contact-info">
+            <div class="section-badge">
+              <i data-lucide="message-square" class="badge-icon" aria-hidden="true"></i>
+              <span>We're Here to Help</span>
+            </div>
+            <h2 id="contact-title" class="contact-heading">Have Questions or Want to Partner?</h2>
+            <p class="contact-description">
+              Whether you are an event organizer looking to feature your festival or an attendee with a question, our
+              community team is ready.
+            </p>
+            <div class="contact-meta-list">
+              <div class="contact-meta-item">
+                <i data-lucide="mail" class="meta-icon orange-text"></i>
+                <span>hello@eventora.io</span>
+              </div>
+              <div class="contact-meta-item">
+                <i data-lucide="map-pin" class="meta-icon purple-text"></i>
+                <span>San Francisco, CA & Global Remote</span>
+              </div>
+            </div>
+          </div>
+
+          <form id="contact-form" class="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name" class="form-label">
+                  Your Name <span class="required-star" aria-hidden="true">*</span>
+                </label>
+                <input type="text" id="contact-name" name="contactName" class="form-input" placeholder="Alex Morgan"
+                  required minlength="2" autocomplete="name" aria-describedby="error-contact-name" />
+                <p class="form-error-msg" id="error-contact-name" role="alert"></p>
+              </div>
+              <div class="form-group">
+                <label for="contact-email" class="form-label">
+                  Email Address <span class="required-star" aria-hidden="true">*</span>
+                </label>
+                <input type="email" id="contact-email" name="contactEmail" class="form-input"
+                  placeholder="alex@domain.com" required autocomplete="email" aria-describedby="error-contact-email" />
+                <p class="form-error-msg" id="error-contact-email" role="alert"></p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contact-message" class="form-label">
+                Message <span class="required-star" aria-hidden="true">*</span>
+              </label>
+              <textarea id="contact-message" name="contactMessage" class="form-input form-textarea" rows="3"
+                placeholder="How can we help you?" required minlength="10"
+                aria-describedby="error-contact-message"></textarea>
+              <p class="form-error-msg" id="error-contact-message" role="alert"></p>
+            </div>
+            <button type="submit" class="btn btn-secondary btn-full" id="contact-submit-btn">
+              <span>Send Message</span>
+              <i data-lucide="send" class="btn-icon" aria-hidden="true"></i>
+            </button>
+            <p id="contact-feedback" class="form-feedback-text" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================================
+       REGISTRATION MODAL DIALOG
+       ====================================================================== -->
+  <dialog id="registration-modal" class="app-dialog" aria-labelledby="reg-modal-title">
+    <div class="dialog-content">
+      <header class="dialog-header">
+        <div class="dialog-title-group">
+          <h3 id="reg-modal-title">Register for Event</h3>
+          <p class="dialog-subtitle">Complete the details below to reserve your entry.</p>
+        </div>
+        <button type="button" class="dialog-close-btn" id="reg-modal-close" aria-label="Close registration dialog">
+          <i data-lucide="x" aria-hidden="true"></i>
+        </button>
+      </header>
+
+      <div class="dialog-body" id="reg-modal-body">
+        <!-- Interactive Registration Form -->
+        <form id="registration-form" class="registration-form" novalidate>
+          <!-- Mandatory Field 1: Selected Event -->
+          <div class="form-group">
+            <label for="reg-event" class="form-label">
+              Selected Event <span class="required-star" aria-hidden="true">*</span>
+            </label>
+            <div class="input-with-icon">
+              <i data-lucide="calendar-check" class="input-icon" aria-hidden="true"></i>
+              <select id="reg-event" name="selectedEvent" class="form-input" required>
+                <!-- Populated dynamically with active events -->
+              </select>
+            </div>
+            <p class="form-error-msg" id="error-selectedEvent"></p>
+          </div>
+
+          <!-- Mandatory Field 2: Full Name -->
+          <div class="form-group">
+            <label for="reg-name" class="form-label">
+              Full Name <span class="required-star" aria-hidden="true">*</span>
+            </label>
+            <div class="input-with-icon">
+              <i data-lucide="user" class="input-icon" aria-hidden="true"></i>
+              <input type="text" id="reg-name" name="fullName" class="form-input" placeholder="e.g. Alex Morgan"
+                required autocomplete="name" />
+            </div>
+            <p class="form-error-msg" id="error-fullName"></p>
+          </div>
+
+          <!-- Mandatory Field 3: Email Address -->
+          <div class="form-group">
+            <label for="reg-email" class="form-label">
+              Email Address <span class="required-star" aria-hidden="true">*</span>
+            </label>
+            <div class="input-with-icon">
+              <i data-lucide="mail" class="input-icon" aria-hidden="true"></i>
+              <input type="email" id="reg-email" name="email" class="form-input" placeholder="alex.morgan@example.com"
+                required autocomplete="email" />
+            </div>
+            <p class="form-error-msg" id="error-email"></p>
+          </div>
+
+          <!-- Mandatory Field 4: Phone Number -->
+          <div class="form-group">
+            <label for="reg-phone" class="form-label">
+              Phone Number <span class="required-star" aria-hidden="true">*</span>
+            </label>
+            <div class="input-with-icon">
+              <i data-lucide="phone" class="input-icon" aria-hidden="true"></i>
+              <input type="tel" id="reg-phone" name="phone" class="form-input"
+                placeholder="e.g. 9876543210 (10-digit mobile)" required autocomplete="tel" />
+            </div>
+            <p class="form-error-msg" id="error-phone"></p>
+          </div>
+
+          <!-- Submission Actions -->
+          <div class="form-actions">
+            <button type="button" class="btn btn-ghost" id="reg-cancel-btn">
+              Cancel
+            </button>
+            <button type="submit" class="btn btn-primary" id="reg-submit-btn">
+              <span>Confirm Registration</span>
+              <i data-lucide="check-circle-2" class="btn-icon" aria-hidden="true"></i>
+            </button>
+          </div>
+        </form>
+
+        <!-- Success Confirmation View -->
+        <div id="reg-success-view" class="registration-success-view" style="display: none;">
+          <div class="success-icon-badge">
+            <i data-lucide="check" class="success-check-icon" aria-hidden="true"></i>
+          </div>
+          <h4 class="success-title">Registration Confirmed!</h4>
+          <p class="success-desc">
+            You are officially registered. Your reservation details have been saved locally.
+          </p>
+          <div id="reg-success-details" class="success-details-card">
+            <!-- Injected by registration.js -->
+          </div>
+          <div class="success-actions">
+            <button type="button" class="btn btn-primary" id="success-view-registrations-btn">
+              View My Registrations
+            </button>
+            <button type="button" class="btn btn-ghost" id="success-done-btn">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ======================================================================
+       MY REGISTRATIONS MODAL DIALOG
+       ====================================================================== -->
+  <dialog id="registrations-modal" class="app-dialog" aria-labelledby="registrations-modal-title">
+    <div class="dialog-content dialog-lg">
+      <header class="dialog-header">
+        <div class="dialog-title-group">
+          <h3 id="registrations-modal-title">My Registrations</h3>
+          <p class="dialog-subtitle">All your upcoming event reservations stored in this browser.</p>
+        </div>
+        <button type="button" class="dialog-close-btn" id="registrations-modal-close"
+          aria-label="Close registrations dialog">
+          <i data-lucide="x" aria-hidden="true"></i>
+        </button>
+      </header>
+
+      <div class="dialog-body" id="registrations-modal-body">
+        <div id="registrations-list" class="registrations-list">
+          <!-- Populated dynamically by registration.js -->
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ======================================================================
+       EVENT DETAILS MODAL DIALOG
+       ====================================================================== -->
+  <dialog id="event-details-modal" class="app-dialog" aria-labelledby="details-modal-title">
+    <div class="dialog-content dialog-lg">
+      <header class="dialog-header">
+        <div class="dialog-title-group">
+          <h3 id="details-modal-title">Event Overview</h3>
+          <p class="dialog-subtitle" id="details-modal-subtitle">Full schedule, venue, and registration options.</p>
+        </div>
+        <button type="button" class="dialog-close-btn" id="details-modal-close" aria-label="Close event details dialog">
+          <i data-lucide="x" aria-hidden="true"></i>
+        </button>
+      </header>
+      <div class="dialog-body" id="details-modal-body">
+        <!-- Injected dynamically by app.js -->
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ======================================================================
+       HOST AN EVENT MODAL (Optional Enhancement Dialog)
+       ====================================================================== -->
+  <dialog id="host-modal" class="app-dialog" aria-labelledby="host-modal-title">
+    <div class="dialog-content">
+      <header class="dialog-header">
+        <div class="dialog-title-group">
+          <h3 id="host-modal-title">Host an Event on Eventora</h3>
+          <p class="dialog-subtitle">Reach thousands of active attendees in your city.</p>
+        </div>
+        <button type="button" class="dialog-close-btn" id="host-modal-close" aria-label="Close dialog">
+          <i data-lucide="x" aria-hidden="true"></i>
+        </button>
+      </header>
+      <div class="dialog-body">
+        <p style="color: var(--text-secondary); margin-bottom: 1.25rem;">
+          Event submission is available for verified community organizers. Tell us briefly about your event and our
+          curation team will review it within 24 hours.
+        </p>
+        <form id="host-event-form" class="registration-form" novalidate>
+          <div class="form-group">
+            <label for="host-title-input" class="form-label">
+              Event Name <span class="required-star" aria-hidden="true">*</span>
+            </label>
+            <input type="text" id="host-title-input" class="form-input" placeholder="e.g. Pacific Jazz & Vinyl Evening"
+              required />
+            <p class="form-error-msg" id="error-host-title" role="alert"></p>
+          </div>
+          <div class="form-group">
+            <label for="host-city-input" class="form-label">
+              City & Venue <span class="required-star" aria-hidden="true">*</span>
+            </label>
+            <input type="text" id="host-city-input" class="form-input" placeholder="e.g. Seattle, WA" required />
+            <p class="form-error-msg" id="error-host-city" role="alert"></p>
+          </div>
+          <div class="form-group">
+            <label for="host-email-input" class="form-label">
+              Organizer Email <span class="required-star" aria-hidden="true">*</span>
+            </label>
+            <input type="email" id="host-email-input" class="form-input" placeholder="organizer@eventora.io" required />
+            <p class="form-error-msg" id="error-host-email" role="alert"></p>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn btn-ghost" id="host-cancel-btn">Cancel</button>
+            <button type="submit" class="btn btn-secondary" id="host-submit-btn">
+              <span>Submit for Curation</span>
+              <i data-lucide="send" class="btn-icon" aria-hidden="true"></i>
+            </button>
+          </div>
+        </form>
+        <p id="host-status-msg" class="form-feedback-text" style="display: none;"></p>
+      </div>
+    </div>
+  </dialog>
+  </div>
+  </dialog>
+
+  <!-- ======================================================================
+       VIEW REGISTRATION PASS MODAL DIALOG
+       ====================================================================== -->
+  <dialog id="view-pass-modal" class="app-dialog" aria-labelledby="view-pass-modal-title">
+    <div class="dialog-content dialog-lg">
+      <header class="dialog-header">
+        <div class="dialog-title-group">
+          <h3 id="view-pass-modal-title">Event Registration Pass</h3>
+          <p class="dialog-subtitle">Official attendee verification voucher saved in LocalStorage.</p>
+        </div>
+        <button type="button" class="dialog-close-btn" id="view-pass-modal-close" aria-label="Close pass dialog">
+          <i data-lucide="x" aria-hidden="true"></i>
+        </button>
+      </header>
+      <div class="dialog-body" id="view-pass-modal-body">
+        <!-- Rendered with createRegistrationSuccessMarkup(reg) -->
+      </div>
+      <div class="dialog-footer-actions">
+        <button type="button" class="btn btn-ghost" id="view-pass-back-btn">
+          Back to Registrations
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ======================================================================
+       CANCEL REGISTRATION CONFIRMATION DIALOG (Custom, Accessible)
+       ====================================================================== -->
+  <dialog id="cancel-confirm-modal" class="app-dialog app-dialog-sm" aria-labelledby="cancel-confirm-title">
+    <div class="dialog-content">
+      <header class="dialog-header">
+        <div class="dialog-title-group">
+          <h3 id="cancel-confirm-title">Cancel Reservation?</h3>
+          <p class="dialog-subtitle">This action will release your seat.</p>
+        </div>
+        <button type="button" class="dialog-close-btn" id="cancel-confirm-close" aria-label="Close dialog">
+          <i data-lucide="x" aria-hidden="true"></i>
+        </button>
+      </header>
+      <div class="dialog-body">
+        <div class="confirm-message-box">
+          <div class="confirm-icon-wrap">
+            <i data-lucide="alert-triangle" class="confirm-icon" aria-hidden="true"></i>
+          </div>
+          <p id="cancel-confirm-text" class="confirm-text">
+            Are you sure you want to cancel your registration? Your reserved seat will be immediately returned to the
+            public ticket pool.
+          </p>
+        </div>
+        <div class="confirm-actions">
+          <button type="button" class="btn btn-ghost" id="cancel-confirm-keep-btn">
+            Keep Reservation
+          </button>
+          <button type="button" class="btn btn-danger" id="cancel-confirm-proceed-btn">
+            <span>Confirm Cancellation</span>
+            <i data-lucide="trash-2" class="btn-icon-xs" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ======================================================================
+       7. FOOTER
+       ====================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <!-- Brand & Description -->
+        <div class="footer-brand">
+          <a href="#home" class="brand-logo footer-logo" aria-label="Eventora Home">
+            <div class="logo-icon-wrapper">
+              <i data-lucide="sparkles" class="logo-icon" aria-hidden="true"></i>
+            </div>
+            <div class="logo-text-group">
+              <span class="logo-title">Eventora</span>
+              <span class="logo-tagline">Discover. Experience. Celebrate.</span>
+            </div>
+          </a>
+          <p class="footer-copy">
+            A premium, modern event discovery platform connecting curious attendees with exceptional concerts,
+            conferences, food tastings, and design workshops worldwide.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <span class="footer-col-title">Navigation</span>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#featured-events">Events Worth Experiencing</a></li>
+            <li><a href="#explore-events">Explore Directory</a></li>
+            <li><a href="#why-eventora">Why Eventora</a></li>
+            <li><a href="#contact">Contact Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Category Links -->
+        <div class="footer-col">
+          <span class="footer-col-title">Top Categories</span>
+          <ul class="footer-links">
+            <li><a href="#explore-events" data-cat-link="Technology">Technology Summits</a></li>
+            <li><a href="#explore-events" data-cat-link="Music">Music & Concerts</a></li>
+            <li><a href="#explore-events" data-cat-link="Art & Culture">Art & Culture</a></li>
+            <li><a href="#explore-events" data-cat-link="Business">Business & FinTech</a></li>
+            <li><a href="#explore-events" data-cat-link="Workshops">Hands-on Workshops</a></li>
+            <li><a href="#explore-events" data-cat-link="Sports">Sports & Fitness</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal / Info -->
+        <div class="footer-col">
+          <span class="footer-col-title">Experience More</span>
+          <ul class="footer-links">
+            <li><a href="#home">Host an Event</a></li>
+            <li><a href="#newsletter-title">Subscribe to Newsletter</a></li>
+            <li><a href="#home" id="footer-my-reg-link">My Event Passes</a></li>
+            <li><a href="#why-eventora">Community Standards</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p class="copyright-text">
+          &copy; 2026 Eventora. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================================
+       TOAST NOTIFICATION CONTAINER
+       ====================================================================== -->
+  <div id="toast-container" class="toast-container" role="region" aria-label="Notifications" aria-live="polite"></div>
+
+  <!-- Application Entry Point (ES6 Module with Cache Buster) -->
+  <script type="module" src="js/app.js?v=3"></script>
+</body>
+
+</html>
