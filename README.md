@@ -1,175 +1,284 @@
-# Eventora 🎟️
+# Eventora – Event Discovery & Registration Website 🎟️
+
 > **"Discover. Experience. Celebrate."**
 
-A premium, modern, and fully responsive Event Discovery & Registration Web Application built with vanilla web standards (HTML5, CSS3, ES6+ JavaScript, LocalStorage, Lucide Icons, and Google Fonts).
+Eventora is a modern, responsive event discovery and registration website developed using HTML5, CSS3, and Vanilla JavaScript. It allows users to explore upcoming events, search and filter events by category, view event details, and register for their preferred events through an interactive registration form.
 
-- **GitHub Repository:** [https://github.com/Saket-4byte/Event_Management_Website](https://github.com/Saket-4byte/Event_Management_Website)
-- **Deployment Platform:** [Vercel](https://vercel.com) (Continuous Deployment from GitHub)
-
----
-
-## 🎨 Visual Identity & Design System
-
-- **Background Palette:** Dark Navy (`#0B1020`) with rich dark surface cards (`#131B32`) and elevated elements (`#18223E`).
-- **Primary Accent:** Vivid Electric Orange (`#FF6B35`) with subtle glow effects for primary call-to-actions.
-- **Secondary Accent:** Royal Deep Purple (`#7C5CFC`) for spotlight badges, highlights, and secondary interactions.
-- **Typography:**
-  - **Headings & Display:** [Manrope](https://fonts.google.com/specimen/Manrope) (Punchy, modern, geometric display font).
-  - **Body & Controls:** [Inter](https://fonts.google.com/specimen/Inter) (Highly legible neo-grotesque font optimized for UI).
-- **Theming:** Default Dark Navy mode with a high-contrast Light mode toggle, respecting user and system preferences (`prefers-color-scheme`).
-- **Iconography:** Scalable [Lucide Icons](https://lucide.dev/).
+The project focuses on creating a simple, user-friendly, and visually appealing platform while demonstrating essential frontend web development concepts.
 
 ---
 
-## 🎪 Event Categories & Catalog
+## 🔗 Project Links
 
-Eventora features 12 realistic sample events spanning the 6 primary categories:
-1. **Technology:** Future AI & Autonomous Systems Summit 2026, CloudNative & Microservices Expo.
-2. **Music:** Neon Odyssey Electronic Music Festival, Symphonic Twilight & Chamber Ensemble.
-3. **Sports:** Urban Sprint & Functional Athletics Challenge, Pacific Coastline Half Marathon & 10K.
-4. **Workshops:** Hands-On UI/UX Design System Masterclass, Full-Stack Web Performance & Edge Computing.
-5. **Business:** VentureScale Global Startup & Investor Summit, FinTech Innovate & Global Commerce Forum.
-6. **Art & Culture:** Modern Digital Art & XR Gallery Night, Heritage Ceramic & Sculpture Expo.
-
-All events feature valid future dates (November 2026 through February 2027) with venue, organizer, capacity, price, and rich descriptions.
+| Resource | Link |
+| :--- | :--- |
+| **GitHub Repository** | [Eventora – Source Code](https://github.com/Saket-4byte/Event_Management_Website) |
+| **Live Website** | [Eventora – Visit Website](https://event-management-website-green.vercel.app/) |
+| **Deployment Platform** | [Vercel](https://vercel.com) |
 
 ---
 
-## ⏱️ Event Details & Live Countdown Timer
+## 1. Project Objective
 
-Clicking **"View Details"** on any event card opens an event details modal displaying:
-- Large cover image with category and featured badges.
-- Event title, tagline, and comprehensive full description.
-- Date, start time, venue, and city.
-- Organizer and host credits.
-- Admission price and remaining available seats.
-- **Real-Time Countdown Timer:** Ticking countdown showing **Days**, **Hours**, **Minutes**, and **Seconds** until start time (updating every second).
-- **Status Notification:** Gracefully displays an informational banner if an event has already started or ended.
-- **Prominent "Register Now" Button:** Automatically forwards the selected event ID to the registration form and opens the reservation dialog.
-- **Responsive & Accessible Controls:** Close button, backdrop click dismissal, and `Escape` key support with automatic timer cleanup.
+The main objective of Eventora is to develop an event management website that makes discovering and registering for events easier.
+
+The website provides a centralized platform where users can:
+- Explore upcoming and featured events.
+- View event information, including date, venue, and description.
+- Search for events using keywords.
+- Filter events according to categories.
+- Register for selected events.
+- Receive confirmation after successful registration.
+
+The project is developed using HTML, CSS, and JavaScript, with LocalStorage for client-side data persistence.
 
 ---
 
-## 📁 File Structure
+## 2. Key Features
+
+### 2.1 Homepage and Navigation
+- Modern and responsive homepage.
+- Navigation menu for easy access to different sections.
+- Hero section with clear call-to-action buttons.
+- Featured events and upcoming events sections.
+- Informative sections introducing the platform.
+
+### 2.2 Event Discovery
+Users can explore different events through interactive event cards.  
+Each event card displays:
+- Event name.
+- Event date.
+- Venue.
+- Event image.
+- Short description.
+- Event category.
+- Available seats.
+- Event details and registration options.
+
+### 2.3 Search and Category Filtering
+- Search events using keywords.
+- Filter events by category.
+- Display matching results dynamically.
+- Show an appropriate message when no events match the search.
+- Reset filters to view all events.
+
+### 2.4 Event Details
+Users can select an event to view its complete information in a detailed dialog.  
+The details include:
+- Event name and description.
+- Date and time.
+- Venue and city.
+- Organizer information.
+- Admission price.
+- Available seats.
+- Live countdown timer.
+- Register Now option.
+
+### 2.5 Event Registration
+Users can register for their selected events through an interactive registration form.
+
+#### Registration Form Fields:
+| Field | Description |
+| :--- | :--- |
+| **Full Name** | Participant's name |
+| **Email Address** | Valid email address |
+| **Phone Number** | Valid 10-digit Indian mobile number |
+| **Selected Event** | Event chosen for registration |
+
+#### Form Validation:
+- Checking that all required fields are completed.
+- Validating the participant's name (minimum 3 characters, valid letters).
+- Checking email format.
+- Validating the phone number (10 digits, valid starting carrier digit).
+- Preventing duplicate registrations for the same event and email.
+- Preventing registration for expired or sold-out events.
+
+### 2.6 Registration Confirmation
+After successful registration:
+- A confirmation message is displayed.
+- A unique registration ID is generated.
+- Participant and event details are displayed.
+- A digital event pass is generated.
+- Registration information is stored in LocalStorage.
+
+### 2.7 My Registrations
+Users can:
+- View their previous registrations.
+- Check registration details.
+- View their digital passes.
+- Cancel a registration.
+- Restore the available seat count after cancellation.
+
+---
+
+## 3. Additional Features
+
+The following enhancements improve the website's functionality and user experience:
+
+| Feature | Description |
+| :--- | :--- |
+| **Dark/Light Mode** | Switch between dark and light themes. |
+| **Theme Persistence** | Saves the selected theme using LocalStorage. |
+| **Event Countdown** | Displays the remaining time before an event starts. |
+| **Animations** | Smooth scrolling, transitions, and hover effects. |
+| **Toast Notifications** | Displays feedback after important user actions. |
+| **Responsive Design** | Supports mobile, tablet, and desktop screens. |
+| **Host an Event** | Allows users to submit an event proposal through a frontend form. |
+| **Digital Event Pass** | Displays registration details in a voucher-style format. |
+
+---
+
+## 4. Technologies Used
+
+| Technology | Purpose |
+| :--- | :--- |
+| **HTML5** | Structure and content of the website |
+| **CSS3** | Styling, layouts, animations, and responsive design |
+| **JavaScript (ES6+)** | Dynamic functionality, search, filtering, and form validation |
+| **LocalStorage** | Client-side storage of registration and theme information |
+| **Lucide Icons** | Icons used throughout the interface |
+| **Google Fonts** | Manrope and Inter typography |
+
+- **Development approach:** Vanilla HTML, CSS, and JavaScript without frontend frameworks.
+- **Backend:** Not required. The project uses browser LocalStorage for client-side data storage.
+
+---
+
+## 5. Event Categories
+
+Eventora includes 12 sample events across six categories:
+1. **Technology** – AI and Autonomous Systems Summit, CloudNative and Microservices Expo.
+2. **Music** – Electronic Music Festival, Symphonic Twilight and Chamber Ensemble.
+3. **Sports** – Urban Sprint Challenge, Half Marathon and 10K.
+4. **Workshops** – UI/UX Design System Masterclass, Web Performance and Edge Computing.
+5. **Business** – Startup and Investor Summit, FinTech and Global Commerce Forum.
+6. **Art & Culture** – Digital Art and XR Gallery, Ceramic and Sculpture Expo.
+
+The sample event catalog includes information such as event dates, venue, organizer, capacity, pricing, and descriptions.
+
+---
+
+## 6. Project Folder Structure
 
 ```text
-eventora/
+Event_Management_Website/
 │
-├── index.html              # Semantic HTML structure & accessible dialogs
+├── index.html
+│
 ├── css/
-│   └── style.css           # Design tokens, Dark Navy/Light themes, responsive grid & animations
+│   └── style.css
+│
 ├── js/
-│   ├── data.js             # 12 sample events across 6 categories & LocalStorage sync
-│   ├── theme.js            # Theme switcher (Dark Navy / Light) with persistence
-│   ├── events.js           # Event card renderers, details view markup, and countdown engine
-│   ├── registration.js     # Field validation, registration processing, pass generation & cancellation
-│   └── app.js              # Application entrypoint, countdown orchestration & modal coordination
+│   ├── data.js
+│   ├── theme.js
+│   ├── events.js
+│   ├── registration.js
+│   └── app.js
+│
 ├── assets/
-│   └── images/             # Static graphics and promotional assets
-└── README.md               # Project documentation
+│   └── images/
+│
+├── vercel.json
+└── README.md
 ```
 
----
-
-## 📝 Event Registration System
-
-The registration system is a pure frontend, client-side implementation using modern browser APIs and `localStorage`.
-
-### 1. Mandatory Fields & Strict Client-Side Validation
-- **Full Name:** Required, minimum 3 characters, letters, spaces, hyphens, and apostrophes only (`/^[a-zA-Z\s'-]+$/`).
-- **Email Address:** Required, valid RFC-compliant format (`/^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/`).
-- **Phone Number:** Required, valid 10-digit Indian mobile number starting with 6, 7, 8, or 9 (`/^[6-9]\d{9}$/`). Automatically normalizes country codes (`+91`, `91`, `0`), spaces, and hyphens.
-- **Selected Event:** Required, auto-populates when clicking "Register Now" from any card or details modal. Prevents registration for expired events, prevents registration when available seats are 0 (Sold Out), and prevents duplicate registration by the same email for the same event.
-
-### 2. Form Behavior & Validation UX
-- **No `alert()` Calls:** Zero native browser alerts are used. Inline error messages appear immediately underneath invalid fields with red borders (`.is-invalid`).
-- **Real-Time Error Removal:** Inline error messages and invalid borders clear as soon as the user enters valid data.
-- **Seat Inventory Synchronization:** Upon successful registration, `event.availableSeats` is decremented in `localStorage`, and all rendered event cards in both Featured and Upcoming sections update their seat count immediately in real time without requiring a page reload.
-- **Unique Registration ID:** Generates an official, unique identifier (e.g., `EVT-REG-MW0SHTM0-ZF2J`).
-- **Digital Pass Confirmation:** Displays a high-contrast official event voucher inside the modal with attendee details, registration ID, date, venue, and a security badge.
-- **My Registrations Modal:** Attendees can view their active reservations anytime via the header badge or footer link, view individual digital vouchers ("View Pass"), or cancel their registration with a custom confirmation dialog to automatically restore their seat back into inventory.
+### File Description:
+| File | Responsibility |
+| :--- | :--- |
+| `index.html` | Main HTML structure of the website |
+| `css/style.css` | Styling, themes, animations, and responsive layouts |
+| `js/data.js` | Sample event data and LocalStorage synchronization |
+| `js/theme.js` | Dark and light theme functionality |
+| `js/events.js` | Event cards, search, filtering, details, and countdown |
+| `js/registration.js` | Registration form, validation, and registration management |
+| `js/app.js` | Main application logic and event handling |
+| `assets/images/` | Event images and visual assets |
+| `vercel.json` | Vercel deployment configuration |
+| `README.md` | Project documentation |
 
 ---
 
-## 🌟 Bonus Features & Enhancements
+## 7. Data Storage
 
-### 1. Dark and Light Mode System
-- **Theme Switcher:** Seamless header toggle with icon animation (Sun for Dark Mode, Moon for Light Mode).
-- **Consistent Palettes:** Deep Dark Navy (`#0B1020`) default with high-contrast surfaces (`#10162A`, `#131B32`), alongside a clean, crisp Light Mode (`#F8FAFC`, `#FFFFFF`, `#F1F5F9`).
-- **Persistence:** Selected theme persists in `localStorage` under `eventora_theme` and automatically restores across refreshes.
-- **Toast Feedback:** Displays an informative toast notification when switching themes.
+Eventora uses the browser's LocalStorage to maintain selected application data.
 
-### 2. Live Event Countdowns
-- **Card-Level Countdown Badges:** Every rendered event card displays a live countdown pill (e.g. `Starts in 14d 6h` or `Starts in 3h 12m 45s`).
-- **Second-by-Second Updates:** A background interval ticks every 1,000ms across all visible cards.
-- **Graceful Expiration:** Past or concluded events display a muted `Concluded` badge, and the event details modal flags them with a clear alert notice.
+The stored information includes:
+- User registration details.
+- Event information and available seat counts.
+- Selected theme preference.
 
-### 3. Smooth Animations & Accessibility
-- **Viewport Scroll Animations:** Sections and cards fade and slide up smoothly as they enter the screen using `IntersectionObserver`.
-- **Card & Button Micro-Interactions:** Subtle lift effects (`translateY`), glowing drop shadows, and border-accent transitions on hover.
-- **Accessibility (`prefers-reduced-motion`):** Clean CSS overrides eliminate transitions and scroll animations for users who prefer reduced motion.
+The application uses LocalStorage to maintain data even after the browser page is refreshed.
 
-### 4. Advanced Registration Management
-- **My Registrations Hub:** View all booked passes with Registration ID, Participant Name, Event Name, and Booking Date.
-- **View Pass Dialog:** Direct access to review the full digital voucher for any previous registration.
-- **Safe Cancellation Flow:** Custom confirmation modal (replaces native `window.confirm`) that safely releases the seat (+1) back to the public pool and leaves all other registrations untouched.
-
-### 5. Host an Event (Curation Proposal)
-- **Community Event Submission:** Organizers can propose an event to the Eventora curation team via the **"Host an Event"** modal.
-- **Review Workflow:** Submissions require editorial curation and are queued for review within 24 hours (proposals are not automatically published to the live public catalog by attendees).
-- **Validation & Feedback:** Validates event name, city/venue, and organizer email with inline feedback and toast notifications.
-
-### 6. Polished User Experience (UX)
-- **Toast Notification Engine:** Stacking notifications in the bottom-right for theme changes, filter resets, pass generation, and cancellations.
-- **Tactile Loading States:** Submit buttons display animated spinners and feedback states during reservation processing.
-- **Rich Empty States:** Informative empty state graphics with direct call-to-actions when searches return zero events or when no registrations exist yet.
-- **Click-to-Copy:** Click any Registration ID on a pass to copy it straight to your clipboard with a confirmation toast.
+> **Note:** This is a frontend-only academic project. LocalStorage data is stored in the user's browser and is not synchronized with a central server or database.
 
 ---
 
-## 🚀 How to Run the Project
+## 8. Responsive Design
 
-Since Eventora uses standard ES6 JavaScript modules (`type="module"`), run it via a local static web server to avoid browser CORS restrictions on `file://`:
+The website is designed to provide a consistent experience across different devices:
+- **Desktop:** Multi-column event layouts and complete navigation.
+- **Tablet:** Adjusted layouts, spacing, and event cards.
+- **Mobile:** Compact navigation and mobile-friendly single-column layouts.
 
-### Option 1: Python 3
-```powershell
-python -m http.server 8000
-```
-Then visit: [http://localhost:8000](http://localhost:8000)
-
-### Option 2: Node.js (npx serve or live-server)
-```powershell
-npx serve .
-```
-or
-```powershell
-npx live-server
-```
-
-### Option 3: VS Code / IDE Extension
-- Right-click `index.html` and select **"Open with Live Server"**.
+Responsive CSS media queries are used to adapt the interface to different screen sizes.
 
 ---
 
-## 🌐 Production Deployment Guide (Vercel)
+## 9. Testing and Verification
 
-Eventora is built purely with web standards (HTML5, CSS3, Vanilla ES6+ JavaScript) and requires zero backend compilation. It is pre-configured with `vercel.json` for one-click deployment on **Vercel**:
-
-### Deploying with Vercel via GitHub (Recommended)
-1. Go to [vercel.com](https://vercel.com) and log in (or sign in with your GitHub account).
-2. Click **"Add New..."** $\rightarrow$ **"Project"**.
-3. Under **Import Git Repository**, find and select `Saket-4byte/Event_Management_Website`.
-4. Configure Project settings:
-   - **Framework Preset:** `Other` (Static HTML/JS)
-   - **Root Directory:** `./`
-   - **Build Command:** Leave empty
-   - **Output Directory:** Leave empty
-5. Click **"Deploy"**.
-6. Vercel will immediately build and assign a production URL (e.g., `https://event-management-website-xxx.vercel.app`). Any future `git push` to `main` will automatically trigger a new deployment preview.
+The following functionality was verified before final submission:
+- [x] Homepage and navigation work correctly.
+- [x] Event cards display the correct information.
+- [x] Search functionality returns relevant results.
+- [x] Category filters work correctly.
+- [x] Event details open and close properly.
+- [x] Registration form validates required fields.
+- [x] Invalid email and phone numbers are rejected.
+- [x] Successful registration displays confirmation.
+- [x] Registration details persist after refreshing the page.
+- [x] My Registrations displays saved registrations.
+- [x] Theme selection persists after refreshing.
+- [x] Website layout works across different screen sizes.
 
 ---
 
-### Alternative Static Hosting (Netlify)
-1. Log in to [Netlify](https://app.netlify.com).
-2. Connect your GitHub repository `Saket-4byte/Event_Management_Website` or drag-and-drop the directory.
-3. Keep the build command empty, publish directory as `.`, and click **Deploy Site**.
+## 10. Learning Outcomes
+
+Through the development of Eventora, the following concepts were applied:
+- Creating semantic webpage structures using HTML5.
+- Designing responsive layouts using CSS3.
+- Implementing DOM manipulation using JavaScript.
+- Working with JavaScript events and functions.
+- Implementing search and category filtering.
+- Performing client-side form validation.
+- Managing browser data using LocalStorage.
+- Creating interactive dialogs and notifications.
+- Organizing a project into separate files and modules.
+- Using GitHub for source code management and Vercel for deployment.
+
+---
+
+## 11. Conclusion
+
+Eventora is an event discovery and registration website developed to demonstrate the practical application of frontend web development technologies.
+
+It provides essential event management functionality, including event browsing, searching, category filtering, detailed event views, registration, and confirmation.
+
+The project also includes additional enhancements such as dark/light mode, countdown timers, digital event passes, and LocalStorage-based registration management.
+
+Overall, Eventora demonstrates how HTML5, CSS3, and JavaScript can be combined to develop a responsive, interactive, and user-friendly web application.
+
+---
+
+## 12. Project Submission Details
+
+| Submission Requirement | Details |
+| :--- | :--- |
+| **Project Name** | Eventora – Event Discovery & Registration Website |
+| **GitHub Repository** | [Event_Management_Website](https://github.com/Saket-4byte/Event_Management_Website) |
+| **Live Website** | [https://event-management-website-green.vercel.app/](https://event-management-website-green.vercel.app/) |
+| **Technologies** | HTML5, CSS3, JavaScript |
+| **Deployment Platform** | Vercel |
+| **Documentation** | README.md |
+
+*Developed as part of the K Explore – Web Designing Project.*
